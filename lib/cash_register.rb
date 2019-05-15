@@ -24,6 +24,8 @@ class CashRegister
   def apply_discount
     # binding.pry 
     if @discount != 0 
+      #right way => @total = @total * (1 - discount / 100.0).round 
+      # my way below 
       @total = @total - @discount * 10 
       "After the discount, the total comes to $#{total}."
     else
